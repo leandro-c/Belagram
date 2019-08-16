@@ -1,6 +1,6 @@
 {
 	"version": 2,
-	"name": "petgram",
+	"name": "belagram",
 	"builds": [
 		{
 			"use": "@now/static-build",
