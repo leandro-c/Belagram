@@ -21,6 +21,9 @@ export const ImgWrapper = styled.div`
     position: relative;
     width: 100%;
 `
+export const Article = styled.article`
+  min-height: 200px;
+`
 
 export const Img = styled.img`
   ${fadeIn({ time: '2s' })}
