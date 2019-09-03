@@ -6,6 +6,8 @@ import { useNearScreen } from '../../hooks/useNearScreen'
 // components
 import { FavButton } from '../FavButton'
 import { ToggleLikeMutation } from './../../container/ToggleLikeMutation'
+
+import { Link } from '@reach/router'
 const DEFAULT_IMAGE = 'https://i.imgur.com/dJa0Hpl.jpg'
 
 export const PhotoCard = ({ id, likes = 0, src = DEFAULT_IMAGE }) => {
@@ -17,11 +19,11 @@ export const PhotoCard = ({ id, likes = 0, src = DEFAULT_IMAGE }) => {
     <Article ref={ref}>
       {
         show && <React.Fragment>
-          <a href={`/?detail=${id}`}>
+          <Link to={`/detail/${id}`}>
             <ImgWrapper>
               <Img src={src} />
             </ImgWrapper>
-          </a>
+          </Link>
           <ToggleLikeMutation>
             {
               (toggleLike) => {
